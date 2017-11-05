@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+      <script type="text/javascript">
+      let worker = new Worker("./worker.js");
+      worker.onmessage=function(message){
+          console.log(message)
+          worker.terminate()
+      };
+      while(1) {
+
+      }
+
+      </script>
+    </body>
+
+</html>
